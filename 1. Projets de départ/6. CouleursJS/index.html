@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Couleurs fun JavaScript</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <form action="" id="color">
+        <div id="group-color-1" class="group-color">
+          <label id="group-color__label-1" for="group-color__input-1">
+            #ffffff
+          </label>
+          <input
+            id="group-color__input-1"
+            type="color"
+            name="group-color__input-1"
+            value="#ffffff"
+          />
+        </div>
+
+        <div id="group-color-2" class="group-color">
+          <label id="group-color__label-2" for="group-color__input-2">
+            #000000
+          </label>
+          <input
+            id="group-color__input-2"
+            type="color"
+            name="group-color__input-2"
+            value="#000000"
+          />
+        </div>
+
+        <div class="group-silder">
+          <label id="group-silder__label" for="group-silder__slider">
+            Oriantation :
+            <span id="group-silder__label__value">0</span>°
+          </label>
+          <input
+            type="range"
+            id="group-silder__slider"
+            name="orientation"
+            min="0"
+            max="360"
+            value="0"
+          />
+        </div>
+        <div class="buttons">
+          <button id="btn-copy" type="submit">Copier</button>
+
+          <button id="btn-random" type="submit">Random</button>
+        </div>
+      </form>
+    </main>
+    <div id="snackbar" data-state="close">
+      <h2 id="snackbar__title">Your gradient</h2>
+      <pre id="snackbar__content">
+            <code id="snackbar__content__code">
+            </code>
+        </pre>
+      <div id="snackbar__buttons">
+        <input id="snackbar__buttons__copy" type="button" value="Copier" />
+        <input id="snackbar__buttons__close" type="button" value="Fermer" />
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

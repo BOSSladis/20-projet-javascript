@@ -1,0 +1,148 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Lato, sans-serif;
+    background: linear-gradient(to right, #ffefba, #ffffff); 
+    padding: clamp(20px, 5vw, 50px) 20px 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header > h1 {
+    font-family: Raleway, sans-serif;
+    font-size: 40px;
+    font-weight: 350;
+    margin-bottom: 30px;
+}
+
+header > h1 > span.bold {
+    font-weight: 600;
+}
+
+main {
+    width: 40vw;
+}
+
+main > form {
+    margin-bottom: 30px;
+}
+
+main .input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+main .input-group > label {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+main .input-group > input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+main .input-group:not(:last-child) {
+    margin-bottom: 40px;
+}
+
+main .btn-group{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    row-gap: 0px;
+    column-gap: 20px;
+}
+
+main .btn-group > button{
+    background-color: hsl(172, 64%, 30%);
+    color: hsl(0, 0%, 100%);
+
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+main > #cookies-output > .cookies {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+main > #cookies-output > .cookies > .cookie {
+    background-color: hsl(0, 0%, 100%);
+    padding: 10px;
+    border-radius: 5px;
+    width: 45%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+
+    position: relative;
+}
+
+.cookie__btn-delete {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    height: 18px;
+    line-height: 0px;
+    width: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff4e4e;
+    color:#ffffff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+#toast {
+    position: fixed;
+    bottom: -10px;
+    width: 50vw;
+
+    display: none;
+    flex-direction: row;
+
+    opacity: 0;
+    background-color: hsl(120, 45%, 35%);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition:
+        opacity 2s ease-in,
+        bottom 2s ease-in-out,
+        display 0s ease 1s;
+}
+
+#toast > span {
+    flex-grow: 1;
+}
+
+#toast > button {
+    border: none;
+    background-color: transparent;
+    text-decoration: underline;
+    font-weight: 600;
+    right: 20px;
+    color: #ffffff;
+}
+
+#toast.show {
+    display: flex;
+    bottom: 20px;
+    opacity: 1;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wiki API</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <img id="icon" src="./ressources/wiki-logo.png" alt="The wikipedia icon." srcset="">
+      <h1 id="title">Recherche <span class="bold">Wikipedia</span></h1>
+    </header>
+    <main>
+      <form action="" onsubmit="event.preventDefault(); callWikipediaAPI();">
+        <input id="research" type="text">
+        <button id="submit" type="submit"><img src="./ressources/search_FILL0_wght400_GRAD0_opsz48.svg" alt="Search icon" srcset=""></button>
+      </form>
+      <div id="content">
+        <ul class="results"></ul>
+      </div>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
